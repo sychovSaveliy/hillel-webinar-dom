@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Распространение событий DOM Level 2</title>
+
+    <script>
+
+        var isTunnel = true;
+
+        window.onload = function () {
+            var e1 = document.getElementById("first");
+            var e2 = document.getElementById("second");
+            var e3 = document.getElementById("third");
+
+
+            // document.body.addEventListener('click', function(event){
+            //     console.log(event);
+            // }, true);
+
+            e1.addEventListener("click",
+                function (event) {
+
+                    this.style.backgroundColor = "green";
+                    console.log("DIV 1");
+                },
+            isTunnel);
+
+            e2.addEventListener("click",
+                function (event) {
+                    event.stopPropagation();
+
+                    this.style.backgroundColor = "yellow";
+                    console.log("DIV 2");
+                },
+            isTunnel);
+
+            e3.addEventListener("click",
+                function (event) {
+                    event.stopPropagation();
+
+                    this.style.backgroundColor = "red";
+                    console.log("DIV 3");
+                },
+            isTunnel);
+        }
+
+    </script>
+
+    <style>
+        div {
+            border: 3px solid gray;
+            padding: 50px;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    Первый
+    <div id="first">
+        Второй
+        <div id="second">
+            Третий
+            <div id="third">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

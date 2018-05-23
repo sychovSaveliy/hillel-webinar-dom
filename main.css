@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.container {
+    width: 200px;
+    height: 150px;
+    border: 2px solid palevioletred;
+    margin: 20px;
+}
+
+hr {
+    margin: 80px 0;
+}
