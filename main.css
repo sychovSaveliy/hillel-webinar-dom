@@ -3,6 +3,17 @@
     padding: 0;
 }
 
+.block {
+    width: 300px;
+    height: 150px;
+    border: 4px solid aquamarine;
+    transition: .05s;
+}
+
+.block.target {
+    box-shadow: 5px 3px 4px 5px black inset;
+}
+
 
 .container {
     width: 200px;

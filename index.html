@@ -5,16 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <script src="./01_dom-element.js"></script>
+    <script src="./02_dom-event.js"></script>
     <link rel="stylesheet" href="./main.css">
 </head>
 <body>
-    <div class="block"></div>
+    <div id="super-block" align="right" class="block foo f1 f2 f3">
+        <a href="#">anchor</a>
+    </div>
     <input type="submit" value="Submit">
     <p>
         <span>
-            <span>
-                <a href="#" data-some-attr="foo_attribute">
+            <span class="block">
+                <a href="/" data-some-attr="foo_attribute">
                     Click me
                 </a>
             </span>
@@ -23,13 +25,13 @@
 
     <hr>
 
-    <input type="text">
-    <input type="range">
-    <input type="submit">
-    <button>Click me</button>
+    <input id="text" type="text" name="email">
+    <input id="range" type="range">
+    <button id="clickMe">Click me</button>
 
     <hr>
 
     <div class="container"></div>
+    <div class="block"></div>
 </body>
 </html>
